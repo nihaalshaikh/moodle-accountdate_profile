@@ -23,5 +23,5 @@
  */
 
 $string['pluginname'] = 'User account creation date in profile';
-$string['accountdate'] = 'Account creation date';
+$string['userid'] = 'User id';
 $string['privacy:metadata']  = 'User account creation date in profile plugin does not store any personal data.';

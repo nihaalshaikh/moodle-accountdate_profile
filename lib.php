@@ -36,17 +36,17 @@ function local_accountdate_profile_myprofile_navigation(core_user\output\myprofi
 
     $userdetailscategory = new core_user\output\myprofile\category(
             'userdetails',
-            get_string('accountdate', 'local_accountdate_profile')
+            get_string('userid', 'local_accountdate_profile')
     );
 
     $tree->add_category($userdetailscategory);
 
-    if ($user->timecreated > 0) {
-        $accountdate = userdate($user->timecreated);
+    if ($user->id > 0) {
+        $userid = $user->id;
     } else {
-        $accountdate = get_string('statusunknown');
+        $userid = get_string('statusunknown');
     }
-    $node = new core_user\output\myprofile\node('userdetails', 'accountdate', $accountdate);
+    $node = new core_user\output\myprofile\node('userdetails', 'userid', $userid);
     $tree->add_node($node);
 
 }
